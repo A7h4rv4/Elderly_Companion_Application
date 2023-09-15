@@ -43,7 +43,7 @@ if ($mysqli) {
     <div class="box form-box">
     <header>Login</header>
     <?php if (isset($login_error)) { ?>
-                          <p><?php echo $login_error; ?></p>
+      <p><?php echo $login_error; ?></p>
     <?php } ?>
     <form method="POST" action="">
     <div class="field input">
@@ -58,7 +58,7 @@ if ($mysqli) {
           <input type="submit" class="btn" name="submit" value="Login">
         </div>
         <div class="link">
-          Not registered yet? <a href="./login.php">Register Here</a>
+          Not registered yet? <a href="./register.html">Register Here</a>
         </div>
     </form>
     </div></div>
