@@ -41,10 +41,7 @@ body {
 }
 
 .container {
-
   padding: 20px;
-  /* border-radius: 5px; */
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   margin-top: 20px;
 }
 
@@ -53,7 +50,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Button styles */
@@ -61,7 +59,7 @@ body {
   width: 30%;
   /* Adjust the width of each card */
   padding: 20px;
-  margin: 10px;
+  margin: 0 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -81,9 +79,10 @@ body {
 
 .btn-card img {
   max-width: 100%;
-  height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
+  height: 265px; 
+  width: 265px;
 }
 
 /* Button title styles */
@@ -96,4 +95,17 @@ body {
 .btn-description {
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+/* Button container styles */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Button separator styles */
+.btn-separator {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
 }

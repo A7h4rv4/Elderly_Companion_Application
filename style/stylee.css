@@ -1,0 +1,98 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #ffffff;
+  /* White background color for the header */
+  /* Adjust the padding for the header height */
+}
+
+.navbar-brand img {
+  width: 60px;
+  /* Adjust the width for the logo */
+  height: 60px;
+  /* Adjust the height for the logo */
+  border-radius: 50%;
+  border: 2px solid #000;
+  /* Black border for the logo */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  /* Vertically align the company name with the logo */
+  color: #000;
+  /* Text color for the company name */
+  font-weight: bold;
+  /* Font weight for the company name */
+}
+
+.navbar-nav .nav-link {
+  color: #000 !important;
+  /* Text color for the navbar links */
+}
+
+/* Style for company name */
+.company-name {
+  margin-left: 10px;
+  /* Add spacing between logo and company name */
+}
+
+.container {
+
+  padding: 20px;
+  /* border-radius: 5px; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  margin-top: 20px;
+}
+
+/* Home page button container */
+.home-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+/* Button styles */
+.btn-card {
+  width: 30%;
+  /* Adjust the width of each card */
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  /* Add hover transition */
+  border: 1px solid #ccc;
+  /* Add border */
+  border-radius: 10px;
+  /* Add border radius */
+}
+
+.btn-card:hover {
+  transform: translateY(-10px);
+  /* Float effect on hover */
+}
+
+.btn-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Button title styles */
+.btn-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Button description styles */
+.btn-description {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

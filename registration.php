@@ -30,10 +30,7 @@ if ($stmt = $mysqli->prepare($checkEmailQuery)) {
   $stmt->close();
 }
 
-// Generate a 10-digit numeric ID
-$numericID = mt_rand(1000000000, 9999999999);
-
-$sql = "INSERT INTO users (id, username, email, age, role, password) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO users (username, email, age, role, password) VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
 
@@ -41,9 +38,26 @@ if (!$stmt->prepare($sql)) {
   die("SQL error: " . $mysqli->error);
 }
 
-$stmt->bind_param("isssss", $numericID, $_POST["username"], $_POST["email"], $_POST["age"], $_POST["role"], $_POST["password"]);
+$stmt->bind_param("sssss", $_POST["username"], $_POST["email"], $_POST["age"], $_POST["role"], $_POST["password"]);
 
 if ($stmt->execute()) {
+  // Get the ID of the newly inserted user
+  $userID = $mysqli->insert_id;
+
+  if ($_POST["role"] === "elderly") {
+    // Insert into the 'epro' table for elderly users
+    $insertElderlyQuery = "INSERT INTO epro (ID, username, age, preferences, health) VALUES (?, ?, ?, '', '')";
+    $stmt = $mysqli->prepare($insertElderlyQuery);
+    $stmt->bind_param("iss", $userID, $_POST["username"], $_POST["age"]);
+    $stmt->execute();
+  } elseif ($_POST["role"] === "volunteer") {
+    // Insert into the 'vpro' table for volunteer users
+    $insertVolunteerQuery = "INSERT INTO vpro (ID, username, interest, skills, availability) VALUES (?, ?, '', '', '')";
+    $stmt = $mysqli->prepare($insertVolunteerQuery);
+    $stmt->bind_param("is", $userID, $_POST["username"]);
+    $stmt->execute();
+  }
+
   header("Location: login.php");
   exit;
 } else {
