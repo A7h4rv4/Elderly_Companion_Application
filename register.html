@@ -15,19 +15,27 @@
       <form action="registration.php" method="post">
         <div class="field input">
           <label for="username">Username</label>
-          <input type="text" name="username" id="username" autocomplete="off" required>
+          <input type="text" name="username" class="ip" id="username" autocomplete="off" required>
         </div>
         <div class="field input">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" autocomplete="off" required>
+          <input type="email" name="email" class="ip" id="email" autocomplete="off" required>
         </div>
         <div class="field input">
           <label for="age">Age</label>
-          <input type="number" name="age" id="age" autocomplete="off" required>
+          <input type="number" name="age" class="ip" id="age" autocomplete="off" required>
+        </div>
+        <div class="field input">
+          <label for="role">Role</label>
+          <select name="role" id="role" class="ip">
+            <option value="">--- Select Role ---</option>
+            <option value="elderly">Elderly</option>
+            <option value="volunteer">Volunteer</option>
+          </select>
         </div>
         <div class="field input">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" autocomplete="off" required>
+          <input type="password" name="password" class="ip" id="password" autocomplete="off" required>
         </div>
         <div class="field">
           <input type="submit" class="btn" name="submit" value="Register">

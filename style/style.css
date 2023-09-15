@@ -47,7 +47,7 @@ body {
   flex-direction: column;
 }
 
-.form-box form .input input {
+.form-box form .input .ip {
   height: 40px;
   width: 100%;
   font-size: 16px;
