@@ -92,9 +92,9 @@ $stmt->close();
     <h2>Scheduled Activities</h2>
     <ul id="activity-list" class="list-group">
         <?php foreach ($activities as $activity): ?>
-                                        <li class="list-group-item">
-                                            <?php echo $activity["activity_name"]; ?> (Start: <?php echo $activity["start_datetime"]; ?>, End: <?php echo $activity["end_datetime"]; ?>)
-                                        </li>
+                                                <li class="list-group-item">
+                                                    <?php echo $activity["activity_name"]; ?> (Start: <?php echo $activity["start_datetime"]; ?>, End: <?php echo $activity["end_datetime"]; ?>)
+                                                </li>
         <?php endforeach; ?>
     </ul>
         </div>
